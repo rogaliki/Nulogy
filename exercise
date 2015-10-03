@@ -3,7 +3,7 @@ function markupcalc(base_price, num_people, category){
 	
 	var flat_mark = base_price*0.05;
 	document.write("flat markup is" + flat_mark);
-	var people_mark = flat_mark * num_people* 0.012;
+	var people_mark = flat_mark * num_people* 1.012;
 	var type_mark=1;
 	if (category =="food")
 		type_mark*=1.13;
