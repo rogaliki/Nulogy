@@ -1,9 +1,23 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Nulogy Exercse/title>
-</head>
-<body>
-<h1></h1>
-</body>
-</html>
+function markupcalc(base_price, num_people, category){
+	document.write("starting flat_mark calc");
+	
+	var flat_mark = base_price*0.05;
+	document.write("flat markup is" + flat_mark);
+	var people_mark = flat_mark * num_people* 0.012;
+	var type_mark=1;
+	if (category =="food")
+		type_mark*=1.13;
+	else if(category =="electronics")
+		type_mark*=1.02;
+	else if (category == "drugs")
+		type_mark*=1.075;
+	type_mark*=flat_mark;
+	document.write(flat_mark);
+	var total = flat_mark+people_mark+type_mark;
+	document.write(total);
+	
+	return flat_mark+people_mark+type_mark;
+	
+	
+	
+}
